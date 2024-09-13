@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import MainMenu from './components/MainMenu';
+import SlowRound from './components/SlowRound';
+import HowToPlay from './components/HowToPlay';
+import GameOver from './components/GameOver';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<MainMenu />} />
+          <Route path="/slow-round" element={<SlowRound />} />
+          <Route path="/how-to-play" element={<HowToPlay />} />
+          <Route path="/game-over" element={<GameOver />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
