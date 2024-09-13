@@ -4,6 +4,7 @@ import MainMenu from './components/MainMenu';
 import SlowRound from './components/SlowRound';
 import HowToPlay from './components/HowToPlay';
 import GameOver from './components/GameOver';
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/game-over" element={<GameOver />} />
         </Routes>
       </div>
+      <Analytics />
     </Router>
   );
 }
