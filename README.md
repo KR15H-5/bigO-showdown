@@ -11,7 +11,6 @@ Big O Showdown is a thrilling, fast-paced game that puts your algorithm analysis
 - 🧩 Challenging code snippets to analyze
 - ⏱️ Test your speed and accuracy
 - 🏆 Compete for high scores
-- 🔄 Skip button for those extra tricky questions (use wisely!)
 - 📚 Learn and improve your Big O notation skills
 
 ## 🚦 How to Play
