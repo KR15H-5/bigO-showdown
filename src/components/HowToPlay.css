@@ -47,7 +47,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
+    min-width: 40px;
     height: 40px;
     background-color: #4a148c;
     color: white;
@@ -133,3 +133,60 @@
   .back-button:hover {
     background-color: #3949ab;
   }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .how-to-play {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .step {
+    flex-direction: column;
+  }
+
+  .step-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .navigation {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .navigation button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .step-content h3 {
+    font-size: 18px;
+  }
+
+  .step-content p {
+    font-size: 14px;
+  }
+
+  .tips h2 {
+    font-size: 20px;
+  }
+
+  .tips li {
+    font-size: 14px;
+  }
+
+  .back-button {
+    width: 100%;
+    text-align: center;
+  }
+}
