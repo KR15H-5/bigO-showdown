@@ -25,7 +25,7 @@ const MainMenu = () => {
 
         <div className="footer">
           <Link to="/how-to-play" className="footer-link">How to Play</Link>
-          <a href="#" className="footer-link">Leaderboard</a>
+          <Link to="/leaderboard" className="footer-link">Leaderboard</Link>
           <a href="#" className="footer-link">About</a>
         </div>
       </div>
