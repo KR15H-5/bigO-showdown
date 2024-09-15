@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import YouTubePopup from './YouTubePopup';
 import './Resources.css';
 
 const Resources = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
   const resources = [
     {
       title: "Big O Notation Explained",
@@ -25,15 +28,24 @@ const Resources = () => {
       description: "A GitHub repository with implementations of various algorithms in JavaScript."
     },
     {
-        title: "Introduction to Algorithms",
-        url: "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
-        description: "MIT OpenCourseWare's free course on algorithms, covering time complexity and more."
-      },
+      title: "Introduction to Algorithms",
+      url: "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+      description: "MIT OpenCourseWare's free course on algorithms, covering time complexity and more."
+    },
   ];
 
   return (
     <div className="resources">
       <h1>Learning Resources</h1>
+      
+      {/* "What is Big O" button at the top */}
+      <button 
+        className="big-o-preview-button"
+        onClick={() => setShowPopup(true)}
+      >
+        What is Big O? Get a Sneak Peek!
+      </button>
+
       <p>Improve your understanding of Big O notation and algorithmic complexity with these resources:</p>
       <ul>
         {resources.map((resource, index) => (
@@ -43,7 +55,19 @@ const Resources = () => {
           </li>
         ))}
       </ul>
-      <Link to="/" className="back-button">Back to Main Menu</Link>
+      
+      {showPopup && (
+        <YouTubePopup
+          videoId="U9o49qwa6hk"
+          start={3167}
+          end={3327}
+          onClose={() => setShowPopup(false)}
+        />
+      )}
+
+      <div className="back-button-container">
+        <Link to="/" className="back-button">Back to Main Menu</Link>
+      </div>
     </div>
   );
 };
