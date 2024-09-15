@@ -5,6 +5,7 @@ import SlowRound from './components/SlowRound';
 import HowToPlay from './components/HowToPlay';
 import GameOver from './components/GameOver';
 import LeaderBoard from './components/LeaderBoard';
+import Resources from './components/Resources';
 import { Analytics } from "@vercel/analytics/react";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/how-to-play" element={<HowToPlay />} />
           <Route path="/game-over" element={<GameOver />} />
           <Route path="/leaderboard" element={<LeaderBoard />} />
+          <Route path="/resources" element={<Resources />} />
         </Routes>
       </div>
       <Analytics />

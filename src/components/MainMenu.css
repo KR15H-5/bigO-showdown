@@ -88,8 +88,10 @@
   
   .footer {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
   }
   
   .footer-link {
@@ -97,9 +99,21 @@
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s ease;
+    flex: 1;
+    text-align: center;
   }
   
   .footer-link:hover {
     color: #4a148c;
     text-decoration: underline;
+  }
+  
+  .menu-button.resources {
+    background-color: #ffa500; /* Orange color to make it stand out */
+    color: white;
+    margin-top: 20px; /* Add some space above the resources button */
+  }
+  
+  .menu-button.resources:hover {
+    background-color: #ff8c00; /* Darker orange on hover */
   }

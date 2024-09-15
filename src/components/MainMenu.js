@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './MainMenu.css'; // We'll create this CSS file for custom styles
+import './MainMenu.css';
 
 const MainMenu = () => {
   return (
@@ -21,6 +21,9 @@ const MainMenu = () => {
           <button className="menu-button secondary" disabled>
             O(1) Round <span className="coming-soon">Coming Soon</span>
           </button>
+          <Link to="/resources" className="menu-button resources">
+            Learning Resources
+          </Link>
         </div>
 
         <div className="footer">
